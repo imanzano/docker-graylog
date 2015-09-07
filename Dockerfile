@@ -11,8 +11,6 @@ RUN \
   apt-get update && \
   apt-get install -y oracle-java8-installer 
   
-RUN apt-get update
-
 ###############################
 ## Elasticsearch
 ###############################
@@ -31,6 +29,6 @@ RUN apt-get install -y mongodb
 ###############################
 RUN wget https://packages.graylog2.org/repo/packages/graylog-1.2-repository-ubuntu14.04_latest.deb
 RUN dpkg -i graylog-1.2-repository-ubuntu14.04_latest.deb
-RUN apt-get install apt-transport-https
+RUN apt-get install -y apt-transport-https
 RUN apt-get update
 RUN apt-get install -y graylog-server graylog-web
