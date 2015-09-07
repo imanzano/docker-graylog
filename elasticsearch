@@ -1,0 +1,6 @@
+#ES_MIN_MEM=1g
+ES_MAX_MEM=1g
+#ES_HEAP_SIZE=2g
+ 
+# Maximum number of open files
+MAX_OPEN_FILES=65535
