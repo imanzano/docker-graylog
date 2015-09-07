@@ -24,4 +24,13 @@ RUN sudo apt-get update && sudo apt-get install elasticsearch
 ## MongoDb
 ###############################
 
-RUN apt-get install mongodb
+RUN apt-get install -y mongodb
+
+###############################
+#Graylog
+###############################
+RUN wget https://packages.graylog2.org/repo/packages/graylog-1.2-repository-ubuntu14.04_latest.deb
+RUN dpkg -i graylog-1.2-repository-ubuntu14.04_latest.deb
+RUN apt-get install apt-transport-https
+RUN apt-get update
+RUN apt-get install -y graylog-server graylog-web
